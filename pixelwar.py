@@ -26,8 +26,10 @@ while True:
     for x in range(20):
         for y in range(30):
             print('Processing (',x,',',y,')')
+            i = x+20
+            j = y+60
             color = getHex(img[abs(19-x),abs(29-y)])
-            colorH25 = getHex(imgH25[x+20,y+60])
+            colorH25 = getHex(imgH25[i,j])
 
             if color != colorH25:
                 print('Color is different ! Us ',color,'| Them ',colorH25)
@@ -39,5 +41,5 @@ while True:
                         hashFound = True
                 sent = False
                 while not sent:
-                    sent = setpixel(x+40,y+40,color[1:],proof)
+                    sent = setpixel(i,j,color[1:],proof)
                 print('Corrected')
