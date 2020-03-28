@@ -41,5 +41,5 @@ while True:
                         hashFound = True
                 sent = False
                 while not sent:
-                    sent = setpixel(i,j,color[1:],proof)
+                    sent = setpixel(j,i,color[1:],proof)
                 print('Corrected')
